@@ -1,0 +1,55 @@
+NAYRAFOOD RESTAURANTE 6.1.2
+================================
+
+CARPETAS
+- APP: interfaz React para PC, celular y tablet.
+- API: Node.js + Express + MongoDB. Aqui esta el archivo .env.
+
+CONFIGURAR MONGODB ATLAS
+1. Abre API\.env con el Bloc de notas.
+2. Reemplaza esta parte de MONGODB_URI:
+   USUARIO:CONTRASENA@CLUSTER
+   por los datos reales de Atlas obtenidos en Connect > Drivers.
+3. Si la contraseña contiene @, :, /, ? o #, codificala para URL.
+   Ejemplo: @ se escribe %40 y # se escribe %23.
+4. En Atlas agrega tu IP en Network Access y da permiso readWrite al usuario.
+5. No borres JWT_SECRET. Ya se incluye un secreto aleatorio exclusivo del paquete.
+
+INICIAR
+1. Instala Node.js 22.13 o superior.
+2. Haz doble clic en INICIAR-NAYRAFOOD.bat.
+3. La primera vez se instalaran las dependencias y se abrira la APP.
+4. Veras UNA sola consola que controla APP y API. Ctrl+C detiene ambas.
+
+PRIMER ADMINISTRADOR
+- En cada base de datos nueva y vacia, la web mostrara Crear administrador inicial.
+- El administrador escribe su propio nombre, usuario y contraseña.
+- Ese registro solo se permite una vez, desde la computadora local, y guarda fecha y hora.
+- Despues, el superadministrador o un administrador autorizado puede crear usuarios y asignar permisos.
+
+USUARIOS, MESAS Y COMANDAS
+- En Usuarios y roles se crean Superadministrador, Administrador, Supervisor, Cajero, Mesero, Barra y Capitan.
+- Al asignar el rol Mesero, la persona aparece automaticamente en el modulo Meseros.
+- El capitan o un administrador puede asignar mesas; tambien se permiten mesas de acceso libre.
+- Las mesas se registran por area con identificadores como A1, B2 o MESA 1.
+- En Punto de venta debes indicar el mesero responsable o asignar la comanda a un usuario de barra.
+- Las asignaciones, folios y cambios quedan visibles en la auditoria sin mostrar identificadores tecnicos.
+
+NOVEDADES 6.1.2
+- Caja abierta compartida: meseros y usuarios autorizados reconocen el mismo turno.
+- Roles y permisos por modulo y por accion, con plantillas personalizables.
+- Submenus de Operacion, Salon y menu, y Administracion.
+- Categorias de comida administrables y selector al registrar productos.
+- Mesas iniciales libres por area, alfanumericas, eliminables y reutilizables.
+- Varias rondas por mesa, origen Mesero o Barra y responsable obligatorio.
+- Al marcar Listo se abre el cobro para usuarios autorizados.
+- Cobro tactil con botones de contado, credito, cortesia, efectivo, transferencia y tarjeta.
+- Referencias legibles por folio o codigo en Inventario y Auditoria.
+- Se conservan PDF de inventario/Kardex, alertas propias y tiempo real de comandas.
+
+DIRECCIONES
+- APP: http://localhost:5173
+- API: http://localhost:3000
+
+AYUDA
+corpsierracode@gmail.com

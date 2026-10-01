@@ -1,0 +1,8 @@
+APP/node_modules/
+APP/dist/
+APP/.env
+API/node_modules/
+API/.env
+API/uploads/products/*
+API/uploads/private/identity/*
+CREDENCIALES-INICIALES.txt

@@ -1,0 +1,12 @@
+{
+  "name": "nayrafood-local",
+  "version": "6.1.2",
+  "private": true,
+  "scripts": {
+    "start": "concurrently --kill-others --names API,APP --prefix-colors yellow,cyan \"npm start --prefix API\" \"wait-on http://localhost:3000/api/health && npm start --prefix APP\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "wait-on": "^8.0.5"
+  }
+}
